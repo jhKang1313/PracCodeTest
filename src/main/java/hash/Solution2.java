@@ -9,16 +9,16 @@ import java.util.stream.Collectors;
 public class Solution2 {
     public String solution(String[] a, String[] b){
         String result = "";
-        List<String> part = Arrays.asList(a).stream().sorted().collect(Collectors.toList());
-        List<String> comp = Arrays.asList(b).stream().sorted().collect(Collectors.toList());
+        List<String> partList = Arrays.asList(a).stream().sorted().collect(Collectors.toList());
+        List<String> compList = Arrays.asList(b).stream().sorted().collect(Collectors.toList());
 
-        for(int i = 0 ; i < part.size() ; i++){
-            String partItem = part.get(i);
-            if(i == part.size() -1 ){
+        for(int i = 0 ; i < partList.size() ; i++){
+            String partItem = partList.get(i);
+            if(i == partList.size() -1 ){
                 result = partItem;
                 break;
             }
-            String compItem = comp.get(i);
+            String compItem = compList.get(i);
             if(!partItem.equals(compItem)){
                 result = partItem;
                 break;
